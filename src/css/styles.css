@@ -1,0 +1,140 @@
+/* BASICOS PARA TODOS */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Sans";
+}
+
+:root{
+    --primary-color: #3b6bd8;
+    --secondary-color: #80ff00;
+    --back-color1: #f7f5f5;
+    --shadow-color: #a8a5a5;
+    --block-color1: #fff;
+}
+
+section{
+    padding: 2em 10%;
+}
+
+span{
+    color: var(--secondary-color);
+}
+
+/* SECTION COMO LO HACEMOS */
+
+.section-como-lo-hacemos {
+    background-color: var(--back-color1);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.section-como-lo-hacemos h1{
+    font-size: 2.8em;
+    font-style: italic;
+}
+
+.blocks{
+    margin-top: 1em;
+    display: flex;
+    position: relative;
+}
+
+.block-n{
+    padding: 3rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    height: 55vh;
+    width: 50vw;
+}
+
+.block-n ul{
+    list-style: none;
+}
+
+.block-1{
+    background-color: var(--block-color1);
+    box-shadow: -10px 12px 1px var(--shadow-color);
+    position: absolute;
+    top: 6vh;
+}
+
+.block-2{
+    background-color: var(--primary-color);
+    box-shadow: -10px 12px 1px var(--secondary-color);
+    color: var(--block-color1);
+    position: absolute;
+    right: 0;
+    top: 2vh;
+    transform: translateX(30%);
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FUENTE */
+.ibm-plex-sans-thin {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 100;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-extra-light {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 200;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-light {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-regular {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-medium {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-semibold {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 600;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+
+.ibm-plex-sans-bold {
+font-family: "IBM Plex Sans", sans-serif;
+font-optical-sizing: auto;
+font-weight: 700;
+font-style: normal;
+font-variation-settings: "wdth" 100;
+}
+

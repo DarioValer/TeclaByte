@@ -1,0 +1,83 @@
+.mobile-nav {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: sans-serif;
+    width: 100%;
+    z-index: 1000;
+    }
+    
+    .nav-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px; /* o lo que necesites */
+        background-color: var(--primary-color, #333);
+        z-index: 1100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+      }
+      
+    
+    .menu-toggle {
+        font-size: 1.5rem;
+        background: none;
+        color: white;
+        border: none;
+        cursor: pointer;
+        position: relative; /* o 'fixed' si lo querés flotante */
+        z-index: 1100; /* mayor que .nav-menu (que tiene 1000) */
+      }
+      
+    
+      .nav-menu {
+        position: fixed;
+        top: 60px; /* igual al alto de .nav-header */
+        right: -100%;
+        width: 250px;
+        height: calc(100vh - 60px); /* para no tapar .nav-header */
+        transition: right 0.3s ease;
+        background-color: var(--color-primario, #333);
+        z-index: 1000;
+        flex-direction: column;
+        overflow-y: auto;
+      }
+      .mobile-nav.open .nav-menu {
+        right: 0;
+      }
+      
+    
+    
+    .nav-menu a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    }
+    
+    .nav-menu a:hover {
+    background-color: var(--color-secundario, #555);
+    }
+    
+    .nav-menu .submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    }
+    
+    .nav-menu .dropdown:hover > .submenu {
+    display: flex;
+    }
+    
+    .mobile-nav.open .nav-menu {
+        right: 0;
+    }      
+    
+    /* Responsive: mostrar todo horizontal en pantallas grandes*/ 
+    @media (min-width: 980px) {
+        .mobile-nav{
+            display: none;
+        }
+    }
