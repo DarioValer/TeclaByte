@@ -6,20 +6,50 @@
     font-family: "IBM Plex Sans";
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
 :root{
     --primary-color: #3b6bd8;
     --secondary-color: #80ff00;
     --back-color1: #f7f5f5;
     --shadow-color: #a8a5a5;
     --block-color1: #fff;
+    --text-color: #fff;
 }
 
 section{
-    padding: 2em 10%;
+    /*padding: 2em 10%;*/
+    padding: 2em;
 }
 
 span{
     color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+header{
+    padding: 2em;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+
+/* SEPARATOR */
+
+.separator{
+    color: var(--secondary-color);
+    padding: 0 2em;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* SECTION COMO LO HACEMOS */
