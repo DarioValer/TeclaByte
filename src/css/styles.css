@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html, body{
+    
+}
+
 
 :root{
     --primary-color: #3b6bd8;
@@ -18,38 +22,217 @@
     --shadow-color: #a8a5a5;
     --block-color1: #fff;
     --text-color: #fff;
+    --third-color: #f7f5f5;
+    --back-color: #ffffff;
 }
+
 
 section{
     /*padding: 2em 10%;*/
     padding: 2em;
+    background-color: var(--back-color);
+    color: var(--primary-color);
 }
 
 span{
     color: var(--secondary-color);
+    font-style: italic;
 }
 
 ul {
     list-style: none;
 }
 
+.subtitle{
+    font-weight: normal;
+}
+
+.texto-escalable {
+  font-size: 3vw;               /* Escala con el viewport */
+  white-space: pre;             /* Mantiene saltos y espacios como en una imagen */
+  display: inline-block;        /* Para comportarse más como una imagen */
+}
+
+
+
+.list-star, .list-plan, .list-msj{
+    padding: 0;
+}
+
+.list-msj{
+    font-size: 3.4vw;
+}
+
+.list-msj li{
+    position: relative;
+    font-weight: bold;
+    color: var(--third-color);
+    background-image: url('/src/svg/screen2/2.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1.5em 2em;
+    z-index: 10;
+    text-align: center;
+}
+
+
+.list-star li , .list-plan li{
+  position: relative;
+  padding-left: 2em; /* Espacio para la estrella */
+}
+
+.list-star li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 1em;
+  height: 1em;
+  background-image: url('/src/svg/screen4/3.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.l-blue-stars li{
+    background-image: url('/src/svg/screen4/2.svg');
+}
+
+.list-plan li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 1em;
+    height: 1em;
+    background-image: url('/src/svg/screens789/4.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* BACKGROUND */
+body{
+    background-image: url('/src/svg/screen1/7.svg');
+    background-repeat: no-repeat;
+    background-size: 240%;   /* o contain, dependiendo del caso */
+    background-position: 58% center; /* x y */
+    height: 100vh;
+}
+
+/* BOTONES */
+
+#b-quiero{
+    padding: 0.3em 2em;
+    width: 180px;
+}
+
+.button-primary{
+    background-color: var(--third-color);
+    padding: 0.8em 2em;
+    border-radius: 30px;
+    box-shadow: -3px 4px 0px 0px #cbc0c6;
+    border: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.button-secondary{
+    background-color: var(--primary-color);
+    padding: 0.8em 2em;
+    border-radius: 30px;
+    box-shadow: -3px 4px 0px 0px #cbc0c6;
+    border: none;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#b-tienes-dudas{
+    margin: 0  2em 2em 2em;
+}
+
+/* ROBOTS */
+.robot-1{
+    width: 20%;
+    position: absolute;
+    top: 50%;
+}
+
+.robot-2{
+    width: 20%;
+}
+
 /* HEADER */
 header{
-    padding: 2em;
+    padding:2em;
     color: var(--text-color);
-    background-color: var(--primary-color);
+    height: 63vh;
+}
+
+.title{
+    font-size: 7vw;
+    text-shadow: -2px 3px 0px #000000;
+    padding: 0.5em 0;
+}
+
+
+.long-text{
+    font-weight: bold;
+    margin-left: 3em;
+}
+
+.bar {
+  position: absolute;
+  right: 0;
+  width: 80vw;
+  height: 12px;         /* grosor de la línea */
+  background-color: var(--third-color);
+  border-radius: 1em 0 0 1em;
+  box-shadow: -1px 4px 0px 1px var(--shadow-color);
+}
+
+.bar-1{
+    width: 80vw;
+    height: 12px;
+    padding: 1em;
+}
+
+.box-b-robot{
+    text-align: right;
+    position: relative;
+    right: 20%;
+    padding: 1em;
 }
 
 
 /* SEPARATOR */
 
 .separator{
+    font-size: 0.8em;
     color: var(--secondary-color);
     padding: 0 2em;
     display: flex;
-    width: 80%;
+    width: 85%;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+    background-color: #ffffff00;
+}
+
+/* SECTIONS */
+.title-section{
+    font-size: 7vw;
+}
+
+
+/* SECTION NOS NECESITAS */
+.nos-necesitas{
+    background-color: #ffffff00;
+}
+
+.titulo-robot-necesitas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* SECTION COMO LO HACEMOS */
@@ -112,6 +295,11 @@ header{
 
 
 /* FUENTE */
+
+.font-i{
+    font-style: italic;
+}
+
 .ibm-plex-sans-thin {
 font-family: "IBM Plex Sans", sans-serif;
 font-optical-sizing: auto;
